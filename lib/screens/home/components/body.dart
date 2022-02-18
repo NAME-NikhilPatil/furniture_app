@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:furniture_app/constants.dart';
+import 'package:furniture_app/models/category.dart';
 import 'package:furniture_app/size_config.dart';
 
 import '../../../components/title_text.dart';
@@ -33,10 +34,23 @@ class Body extends StatelessWidget {
                       aspectRatio: 1.025,
                       child: Container(
                         color: kSecondaryColor,
-                        child: FadeInImage.assetNetwork(
-                          placeholder: 'assets/spinner.gif',
-                          image: category.image,
+                        child: Column(
+                          children: [
+                            TitleText()
+                          ],
                         ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    child: AspectRatio(
+                      aspectRatio: 1.15,
+                      child: FadeInImage.assetNetwork(
+                        placeholder: 'assets/spinner.gif',
+                        image: catagory.image,
                       ),
                     ),
                   ),
